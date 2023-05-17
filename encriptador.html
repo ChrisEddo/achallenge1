@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="website icon" type="png" href="img/iconocha.JPG">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="styleenc.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <label for="">Palabra origen</label>
+            <input type="text" id="texto">     
+            <br>       
+            <button onclick="codificar()">Encriptar</button>
+            <button onclick="decodificar()">Desncriptar</button>
+            <br>
+            <br>
+            <textarea id="result"></textarea>
+
+                <script>
+                    var texto = document.getElementById("texto");
+
+                    function codificar(){
+                        let mensajecodificado
+                        let originWord = document.getElementById("texto").value;
+                        let response = "";
+                        response = originWord.split("");
+                        
+                        texto.innerHTML = mensajecodificado
+                        texto.innerHTML = "response"
+                    }
+                    function decodificar(){
+                        document.write("funciona otro")
+                    }
+                </script>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
