@@ -12,8 +12,8 @@
         </header>
         <main>
             <label for="">Palabra origen</label>
-            <input type="text" id="texto">     
-            <br>       
+            <input type="text" id="texto">
+            <br>
             <button onclick="codificar()">Encriptar</button>
             <button onclick="decodificar()">Desncriptar</button>
             <br>
@@ -21,20 +21,24 @@
             <textarea id="result"></textarea>
 
                 <script>
-                    var texto = document.getElementById("texto");
-
+                    
                     function codificar(){
+                        var texto = document.getElementById("texto").value;
+                        var result = document.getElementById("result");
                         let mensajecodificado
-                        let originWord = document.getElementById("texto").value;
-                        let response = "";
-                        response = originWord.split("");
                         
-                        texto.innerHTML = mensajecodificado
-                        texto.innerHTML = "response"
+                        mensajecodificado = texto.replaceAll('e', 'enter').replaceAll("i","imes").replaceAll('a', 'ai').replaceAll('o', 'ober').replaceAll('u', 'ufat')
+                        result.innerHTML = mensajecodificado
                     }
                     function decodificar(){
-                        document.write("funciona otro")
+                        var texto = document.getElementById("texto").value;
+                        var result = document.getElementById("result");
+                        let mensajedecodificado
+                        
+                        mensajedecodificado = texto.replaceAll('enter', 'e').replaceAll("imes","i").replaceAll('ai', 'a').replaceAll('ober', 'o').replaceAll('ufat', 'u')
+                        result.innerHTML = mensajedecodificado
                     }
+                
                 </script>
         </main>
         <footer>
