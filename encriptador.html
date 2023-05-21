@@ -6,20 +6,27 @@
         <link rel="website icon" type="png" href="img/iconocha.JPG">
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="styleenc.css">
+
+        <header>
+            <img src="img/Logo.png">
+        </header>
     </head>
     <body>
-        <header>
-        </header>
         <main>
-            <label for="">Palabra origen</label>
-            <input type="text" id="texto">
             <br>
-            <button onclick="codificar()">Encriptar</button>
-            <button onclick="decodificar()">Desncriptar</button>
+            <section class="entradasalida">
+                <textarea id="texto" placeholder="Ingrese texto aquí"></textarea>
+                <br>
+                <br>
+                <textarea id="resultnone"></textarea>
+                <textarea id="result"></textarea>
+                <br>
+            </section>
             <br>
-            <br>
-            <textarea id="result"></textarea>
-
+            <section class="botones">
+            <button class="codificar" onclick="codificar()">Encriptar</button>
+            <button class="decodificar" onclick="decodificar()">Desencriptar</button>
+            </section>
                 <script>
                     
                     function codificar(){
@@ -27,16 +34,16 @@
                         var result = document.getElementById("result");
                         let mensajecodificado
                         
-                        mensajecodificado = texto.replaceAll('e', 'enter').replaceAll("i","imes").replaceAll('a', 'ai').replaceAll('o', 'ober').replaceAll('u', 'ufat')
-                        result.innerHTML = mensajecodificado
+                        mensajecodificado = texto.replaceAll('e', 'enter').replaceAll("i","imes").replaceAll('a', 'ai').replaceAll('o', 'ober').replaceAll('u', 'ufat');
+                        result.innerHTML = mensajecodificado;
                     }
                     function decodificar(){
                         var texto = document.getElementById("texto").value;
                         var result = document.getElementById("result");
-                        let mensajedecodificado
+                        let mensajedecodificado;
                         
-                        mensajedecodificado = texto.replaceAll('enter', 'e').replaceAll("imes","i").replaceAll('ai', 'a').replaceAll('ober', 'o').replaceAll('ufat', 'u')
-                        result.innerHTML = mensajedecodificado
+                        mensajedecodificado = texto.replaceAll('enter', 'e').replaceAll("imes","i").replaceAll('ai', 'a').replaceAll('ober', 'o').replaceAll('ufat', 'u');
+                        result.innerHTML = mensajedecodificado;
                     }
                 
                 </script>
