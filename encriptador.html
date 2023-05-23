@@ -6,10 +6,12 @@
         <link rel="website icon" type="png" href="img/iconocha.JPG">
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="styleenc.css">
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
         <header>
             <img src="img/Logo.png">
-        </header>
+        </header> 
     </head>
     <body>
         <main>
@@ -24,6 +26,7 @@
                     <legend class="ingresatexto">Ingresa el texto que desees encriptar o desencriptar.</legend>
                 </div>
                 <textarea id="result"></textarea>
+                <button class="copy" onclick="decodificar()">Copiar</button>
                 <br>
             </section>
             <br>
@@ -42,7 +45,7 @@
                         var result = document.getElementById("result"); //elemento con id result asignado a la variable result
                         result.style.display="inherit"; 
                         var resultnone = document.getElementById("resultnone");
-                        resultnone.style.display="none"; 
+                        resultnone.style.display="none";
                     }
                     function codificar(){
                         replace()
