@@ -92,14 +92,14 @@ legend{
     display: none;
     border: #FFFFFF;
     position: absolute;
-    width: 400px;
-    height: 850px;
+    width: 365px;
+    height: 815px;
     left: 1100px;
     top: 40px;
-    padding: 32px;
+    padding: 50px;
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 370;
     font-size: 24px;
     line-height: 150%;
     color: #495057;
@@ -107,7 +107,7 @@ legend{
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
 }
-.copy{
+#copy{
     width: 328px;
     height: 67px;
     background: #FFFFFF;
@@ -162,4 +162,8 @@ legend{
     border-radius: 24px;
     font-size: 20px;
     color: #0A3871
+}
+@media screen and (max-width:480px){
+
+
 }
